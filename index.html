@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agents مقابل Agentic AI: التصنيف المفاهيمي والتطبيقات والتحديات</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #9b59b6;
+            --light: #ecf0f1;
+            --dark: #1a252f;
+            --success: #27ae60;
+            --warning: #f39c12;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            line-height: 1.8;
+            color: #2d3748;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8eaed 100%);
+            min-height: 100vh;
+            direction: rtl;
+            text-align: right;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+        
+        header p.subtitle {
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+            opacity: 0.9;
+        }
+        
+        .ai-animation {
+            width: 200px;
+            height: 120px;
+            margin: 1.5rem auto;
+            position: relative;
+        }
+        
+        .agent {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 0 15px rgba(155, 89, 182, 0.5);
+        }
+        
+        .agent-1 {
+            top: 10px;
+            right: 20px;
+            animation: float-1 4s ease-in-out infinite;
+        }
+        
+        .agent-2 {
+            bottom: 10px;
+            left: 20px;
+            animation: float-2 5s ease-in-out infinite;
+        }
+        
+        .connection {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 4px;
+            background: var(--secondary);
+            z-index: -1;
+        }
+        
+        .connection::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            background: var(--light);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes float-1 {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes float-2 {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+        
+        @keyframes pulse {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(100px); }
+        }
+        
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: var(--primary);
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        
+        nav a:hover {
+            background: var(--accent);
+            color: white;
+        }
+        
+        nav a i {
+            margin-left: 8px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .intro h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        
+        .intro p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 1rem auto;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, rgba(155, 89, 182, 0.2) 0%, rgba(155, 89, 182, 0) 100%);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        
+        .english-term {
+            font-size: 0.9em;
+            color: var(--secondary);
+            font-weight: 500;
+            margin-right: 5px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin: 3rem 0 2rem;
+            color: var(--primary);
+            position: relative;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            margin: 0.5rem auto;
+            border-radius: 2px;
+        }
+        
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .module-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .module-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .card-header {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+            color: white;
+            padding: 1.5rem;
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .card-body h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .concept-list {
+            list-style: none;
+        }
+        
+        .concept-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .concept-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .concept-list li i {
+            color: var(--accent);
+            margin-left: 10px;
+            margin-top: 5px;
+            min-width: 24px;
+        }
+        
+        .example-box {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 0.8rem;
+            border-right: 3px solid var(--accent);
+        }
+        
+        .example-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .key-concepts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .concept-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            border-right: 4px solid var(--accent);
+        }
+        
+        .concept-card h4 {
+            margin-bottom: 0.8rem;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+        
+        .ai-diagram {
+            max-width: 100%;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin: 3rem auto;
+            text-align: center;
+        }
+        
+        .diagram-title {
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            font-size: 1.4rem;
+        }
+        
+        .process-flow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .flow-step {
+            width: 120px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .flow-step:not(:last-child):after {
+            content: '←';
+            position: absolute;
+            left: -30px;
+            top: 40px;
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+        
+        .step-circle {
+            width: 80px;
+            height: 80px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.8rem;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(155, 89, 182, 0.3);
+        }
+        
+        .conclusion {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 10px;
+            margin: 4rem 0;
+        }
+        
+        .conclusion-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .conclusion-card {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .conclusion-card h3 {
+            margin-bottom: 1rem;
+            color: var(--light);
+        }
+        
+        .real-world-example {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin: 2rem 0;
+        }
+        
+        .example-header {
+            background: var(--success);
+            color: white;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .example-content {
+            padding: 1.5rem;
+        }
+        
+        /* New styles for enhanced content */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .card {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            border-right: 4px solid var(--accent);
+        }
+        
+        .card h4 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+        
+        .concept-item {
+            background: white;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+        
+        .algorithm-box {
+            background: #f0f9ff;
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+        
+        .code-example {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-family: monospace;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            direction: ltr;
+            text-align: left;
+        }
+        
+        .science-box {
+            background: #ebf8ff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-right: 4px solid var(--accent);
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(155, 89, 182, 0.1) 0%, rgba(155, 89, 182, 0.05) 100%);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border: 2px solid var(--accent);
+        }
+        
+        .research-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #ebf8ff 100%);
+        }
+        
+        .applications-section {
+            background: linear-gradient(135deg, #f0fff4 0%, #ebf8ff 100%);
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--accent);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            right: -10px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: -10px;
+        }
+        
+        /* Scroll to top button styles */
+        #scrollToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        
+        #scrollToTopBtn:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
+        
+        #scrollToTopBtn i {
+            transition: transform 0.3s ease;
+        }
+        
+        #scrollToTopBtn:hover i {
+            transform: translateY(-3px);
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(155, 89, 182, 0.7); }
+            70% { box-shadow: 0 0 0 12px rgba(155, 89, 182, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(155, 89, 182, 0); }
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+            
+            header p.subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .process-flow {
+                flex-direction: column;
+            }
+            
+            .flow-step:not(:last-child):after {
+                content: '↑';
+                left: 0;
+                right: 0;
+                top: auto;
+                bottom: -30px;
+            }
+            
+            nav a {
+                padding: 0.8rem;
+                font-size: 0.9rem;
+            }
+            
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 0;
+                left: 0 !important;
+            }
+            
+            .timeline-item:nth-child(even) .timeline-content::before,
+            .timeline-item:nth-child(odd) .timeline-content::before {
+                left: 20px;
+            }
+            
+            /* Adjust button for mobile */
+            #scrollToTopBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>AI Agents مقابل Agentic AI</h1>
+            <p class="subtitle">تصنيف مفاهيمي، تطبيقات، وتحديات مع دروس عملية لبناء مواقع الويب</p>
+            
+            <div class="ai-animation">
+                <div class="agent agent-1">A1</div>
+                <div class="agent agent-2">A2</div>
+                <div class="connection"></div>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="nav-container">
+            <a href="#overview"><i class="fas fa-home"></i> نظرة عامة</a>
+            <a href="#generative"><i class="fas fa-brain"></i> الذكاء التوليدي</a>
+            <a href="#agents"><i class="fas fa-robot"></i> وكلاء الذكاء الاصطناعي</a>
+            <a href="#agentic"><i class="fas fa-network-wired"></i> الذكاء الوكيل</a>
+            <a href="#applications"><i class="fas fa-lightbulb"></i> تطبيقات الويب</a>
+            <a href="#challenges"><i class="fas fa-exclamation-triangle"></i> التحديات</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <!-- Overview Section -->
+        <section id="overview" class="content-section intro">
+            <h2>📖 مقدمة: التصنيف المفاهيمي</h2>
+            <p style="font-size: 1.2rem; text-align: center; margin-bottom: 2rem; color: #666;">
+                تقدم هذه الدراسة تصنيفًا مفاهيميًا شاملاً لنموذجين سريعي التطور في الذكاء الاصطناعي: 
+                <span class="highlight">وكلاء الذكاء الاصطناعي (AI Agents)</span> و
+                <span class="highlight">الذكاء الوكيل (Agentic AI)</span>، 
+                مع توضيح فلسفات التصميم المميزة وقدرات كل منهما وتطبيقاتهما وتحدياتهما.
+            </p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>الذكاء التوليدي <span class="english-term">(Generative AI)</span></h4>
+                        <p>نماذج توليدية مثل ChatGPT قبل أن تصبح وكيلاً، تركز على إنتاج محتوى جديد بناءً على مطالبات المستخدم</p>
+                        <p>تتميز بالتفاعلية <span class="english-term">(Reactivity)</span>، القدرة متعددة الوسائط <span class="english term">(Multimodal)</span>، والاعتماد على المطالبات</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>وكلاء الذكاء الاصطناعي <span class="english-term">(AI Agents)</span></h4>
+                        <p>كيانات برمجية ذاتية مصممة لتنفيذ مهام موجهة نحو الهدف في بيئات رقمية محدودة</p>
+                        <p>تتميز بالاستقلالية <span class="english term">(Autonomy)</span>، التخصص في المهام <span class="english term">(Task-specificity)</span>، والتفاعل مع التكيف</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>الذكاء الوكيل <span class="english-term">(Agentic AI)</span></h4>
+                        <p>أنظمة متعددة الوكلاء حيث يتعاون وكلاء متخصصون في تفكيك الأهداف والتواصل والتنسيق</p>
+                        <p>تتميز بالتعاون متعدد الوكلاء <span class="english term">(Multi-agent collaboration)</span>، الذاكرة المستمرة <span class="english term">(Persistent memory)</span>، والاستقلالية المنظمة</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Generative AI Section -->
+        <section id="generative" class="content-section">
+            <h2>🧠 الذكاء التوليدي: الأساس التمهيدي</h2>
+            
+            <div class="concept-card">
+                <h4><i class="fas fa-dna"></i> التعريف والخصائص</h4>
+                <p>نماذج توليدية مثل نماذج اللغة الكبيرة <span class="english-term">(LLMs)</span> ونماذج الصور الكبيرة <span class="english-term">(LIMs)</span> تركز على إنتاج محتوى جديد (نصوص، صور، أكواد) استنادًا إلى مطالبات المستخدم.</p>
+                
+                <div class="example-box">
+                    <div class="example-title"><i class="fas fa-laptop-code mr-2"></i> أمثلة:</div>
+                    <p>ChatGPT قبل الإصدارات الوكيلة، نماذج توليد الصور مثل DALL-E و Midjourney</p>
+                </div>
+            </div>
+
+            <div class="key-concepts">
+                <div class="concept-card">
+                    <h4><i class="fas fa-sync-alt"></i> التفاعلية <span class="english-term">(Reactivity)</span></h4>
+                    <p>مدفوعة بالمدخلات دون السعي الذاتي لتحقيق الأهداف</p>
+                </div>
+                
+                <div class="concept-card">
+                    <h4><i class="fas fa-images"></i> القدرة متعددة الوسائط <span class="english-term">(Multimodal)</span></h4>
+                    <p>القدرة على معالجة وإنتاج أنواع مختلفة من المحتوى</p>
+                </div>
+                
+                <div class="concept-card">
+                    <h4><i class="fas fa-comment-alt"></i> الاعتماد على المطالبات <span class="english-term">(Prompt Dependency)</span></h4>
+                    <p>تفتقر إلى الذاكرة المستمرة أو التخطيط متعدد الخطوات بدون سقالات خارجية</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-exclamation-circle"></i> القيود الرئيسية</h4>
+                <p>عدم القدرة على التعامل مع المهام الديناميكية والحفاظ على الحالة أدى إلى تطوير وكلاء الذكاء الاصطناعي</p>
+            </div>
+        </section>
+
+        <!-- AI Agents Section -->
+        <section id="agents" class="content-section">
+            <h2>🤖 وكلاء الذكاء الاصطناعي (AI Agents)</h2>
+            
+            <div class="concept-card">
+                <h4><i class="fas fa-robot"></i> التعريف والخصائص</h4>
+                <p>كيانات برمجية ذاتية مصممة لتنفيذ مهام موجهة نحو الهدف في بيئات رقمية محدودة، غالبًا ما تعمل كبديل للمستخدمين البشريين.</p>
+                
+                <div class="example-box">
+                    <div class="example-title"><i class="fas fa-laptop-code mr-2"></i> أمثلة:</div>
+                    <p>أتمتة دعم العملاء، البحث المؤسسي الداخلي، الترشيح التلقائي للبريد الإلكتروني، المساعد الذاتي للجدولة</p>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <h4><i class="fas fa-cogs"></i> المكونات الرئيسية</h4>
+                    <p>تعزز نماذج LLMs/LIMs من خلال دمج الأدوات الخارجية، استدعاء الوظائف، والتفكير المتسلسل لاسترداد المعلومات في الوقت الفعلي وتنفيذ سير العمل متعدد الخطوات</p>
+                </div>
+                
+                <div class="card">
+                    <h4><i class="fas fa-tools"></i> الأطر التقنية</h4>
+                    <p>أطر مثل AutoGPT التي تمكن نماذج الذكاء الاصطناعي من أداء مهام أكثر تعقيدًا باستقلالية</p>
+                </div>
+            </div>
+
+            <div class="science-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> التحديات الرئيسية</h4>
+                <p>
+                    <strong>فهم سببي محدود:</strong> صعوبة في فهم العلاقات السببية الحقيقية<br>
+                    <strong>قيود LLMs الموروثة:</strong> الهلوسة، حساسية المطالبات، التفكير الضحل<br>
+                    <strong>خصائص وكيلة غير مكتملة:</strong> استقلالية جزئية، استباقية محدودة<br>
+                    <strong>مشاكل التخطيط طويل المدى:</strong> صعوبة في التعافي من الأخطاء
+                </p>
+            </div>
+        </section>
+
+        <!-- Agentic AI Section -->
+        <section id="agentic" class="content-section">
+            <h2>🌐 الذكاء الوكيل (Agentic AI)</h2>
+            
+            <div class="concept-card">
+                <h4><i class="fas fa-network-wired"></i> التعريف والخصائص</h4>
+                <p>تحول نموذجي نحو أنظمة متعددة الوكلاء حيث يتعاون وكلاء متخصصون في تفكيك الأهداف والتواصل والتنسيق نحو أهداف مشتركة عالية المستوى.</p>
+                
+                <div class="example-box">
+                    <div class="example-title"><i class="fas fa-laptop-code mr-2"></i> أمثلة:</div>
+                    <p>مساعدي البحث متعددي الوكلاء، تنسيق الروبوتات الذكية، دعم القرار الطبي التعاوني، أتمتة سير العمل التكيفية</p>
+                </div>
+            </div>
+
+            <div class="key-concepts">
+                <div class="concept-card">
+                    <h4><i class="fas fa-users"></i> التعاون متعدد الوكلاء</h4>
+                    <p>أنظمة تتضمن وكلاء متخصصين يعملون معًا لتحقيق أهداف مشتركة</p>
+                </div>
+                
+                <div class="concept-card">
+                    <h4><i class="fas fa-sitemap"></i> تفكيك المهام الديناميكي</h4>
+                    <p>القدرة على تقسيم المهام المعقدة إلى مهام فرعية أصغر</p>
+                </div>
+                
+                <div class="concept-card">
+                    <h4><i class="fas fa-memory"></i> الذاكرة المستمرة</h4>
+                    <p>أنظمة تخزين ذاكرة تسمح بالتعلم المستمر والاحتفاظ بالسياق</p>
+                </div>
+            </div>
+
+            <div class="science-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> التحديات الرئيسية</h4>
+                <p>
+                    <strong>مشاكل سببية مضخمة:</strong> صعوبة في فهم العلاقات السببية المعقدة<br>
+                    <strong>اختناقات الاتصال والتنسيق:</strong> صعوبة في التنسيق بين الوكلاء المتعددين<br>
+                    <strong>سلوكيات ناشئة غير متوقعة:</strong> نتائج غير متوقعة من تفاعل الوكلاء<br>
+                    <strong>مشاكل الثقة والشرح:</strong> صعوبة في تفسير قرارات الأنظمة المعقدة<br>
+                    <strong>مخاوف أخلاقية:</strong> تحديات الحوكمة والمساءلة
+                </p>
+            </div>
+        </section>
+
+        <!-- Web Applications Section -->
+        <section id="applications" class="content-section applications-section">
+            <h2>💻 تطبيقات في تطوير الويب</h2>
+            
+            <div class="grid">
+                <div class="card">
+                    <h4><i class="fas fa-layer-group"></i> البدء بالذكاء التوليدي</h4>
+                    <p>
+                        <strong>توليد المحتوى:</strong> ميزات مثل إنشاء مقالات ديناميكية، أوصاف المنتجات، أو النصوص الإبداعية<br>
+                        <strong>روبوتات الدردشة البسيطة:</strong> للأسئلة الشائعة أو الحوار حيث لا يحتاج الذكاء الاصطناعي إلى تذكر المحادثات السابقة
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <h4><i class="fas fa-robot"></i> الارتقاء بتجربة المستخدم بوكلاء الذكاء الاصطناعي</h4>
+                    <p>
+                        <strong>أتمتة المهام:</strong> ميزات مثل روبوتات دعم العملاء التي تفهم الاستفسارات وتقدم ردودًا واعية بالسياق<br>
+                        <strong>التوصيات الشخصية:</strong> وكلاء يتعلمون تفضيلات المستخدم ويقترحون محتوى أو منتجات ذاتيًا<br>
+                        <strong>دمج الأدوات:</strong> تمكين الوكلاء من استدعاء واجهات برمجة التطبيقات الخارجية للتفاعل مع قواعد البيانات أو خدمات الطرف الثالث
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <h4><i class="fas fa-network-wired"></i> اعتماد الذكاء الوكيل للميزات المعقدة</h4>
+                    <p>
+                        <strong>سير العمل المعقد:</strong> أنظمة يمكنها تقسيم طلبات المستخدمين الكبيرة إلى مهام فرعية وتفويضها لوكلاء متخصصين<br>
+                        <strong>طبقة التنسيق:</strong> طبقة متطورة لإدارة دورة حياة الوكلاء المتخصصين وتعيين الأدوار<br>
+                        <strong>ذاكرة مستمرة مشتركة:</strong> مهمة للوصول إلى سياق موحد ومتطور من قبل جميع الوكلاء المتعاونين
+                    </p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-shield-alt"></i> أفضل الممارسات</h4>
+                <p>
+                    <strong>RAG للدقة:</strong> استخدام التوليد المعزز بالاسترجاع بدلاً من الاعتماد فقط على بيانات التدريب<br>
+                    <strong>هندسة المطالبات القوية:</strong> كيف يتم هيكلة المطالبات يؤثر بشكل كبير على سلوك الوكيل<br>
+                    <strong>الأولوية للثقة:</strong> لأي ذكاء اصطناعي معقد، يجب مراعاة الحوكمة والمساءلة لبناء الثقة
+                </p>
+            </div>
+        </section>
+
+        <!-- Challenges Section -->
+        <section id="challenges" class="content-section">
+            <h2>⚠️ التحديات والحلول</h2>
+            
+            <div class="modules-grid">
+                <div class="module-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-brain"></i> تحديات الوكلاء الفردية</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="concept-list">
+                            <li>
+                                <i class="fas fa-head-side-virus"></i>
+                                <div>
+                                    <h4>الهلوسة <span class="english-term">(Hallucinations)</span></h4>
+                                    <p>إنتاج معلومات غير صحيحة أو مفتعلة</p>
+                                    <div class="example-box">
+                                        <div class="example-title"><i class="fas fa-lightbulb mr-2"></i> الحل:</div>
+                                        <p>التوليد المعزز بالاسترجاع <span class="english-term">(RAG)</span> لربط الردود بمصادر موثوقة</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-cogs"></i>
+                                <div>
+                                    <h4>حساسية المطالبات <span class="english-term">(Prompt Sensitivity)</span></h4>
+                                    <p>تغيرات كبيرة في الأداء مع تغييرات طفيفة في المطالبات</p>
+                                    <div class="example-box">
+                                        <div class="example-title"><i class="fas fa-lightbulb mr-2"></i> الحل:</div>
+                                        <p>هندسة مطالبات قوية باستخدام خطوط أنابيب برمجية</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="module-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-users"></i> تحديات الأنظمة متعددة الوكلاء</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="concept-list">
+                            <li>
+                                <i class="fas fa-comments"></i>
+                                <div>
+                                    <h4>اختناقات الاتصال <span class="english-term">(Communication Bottlenecks)</span></h4>
+                                    <p>صعوبة في التنسيق الفعال بين الوكلاء المتعددين</p>
+                                    <div class="example-box">
+                                        <div class="example-title"><i class="fas fa-lightbulb mr-2"></i> الحل:</div>
+                                        <p>بروتوكولات اتصال واضحة وهياكل رسوم منظمة</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <div>
+                                    <h4>سلوكيات ناشئة <span class="english-term">(Emergent Behaviors)</span></h4>
+                                    <p>نتائج غير متوقعة من تفاعلات الوكلاء المعقدة</p>
+                                    <div class="example-box">
+                                        <div class="example-title"><i class="fas fa-lightbulb mr-2"></i> الحل:</div>
+                                        <p>آليات المراقبة والمراجعة والاختبار في بيئات محاكاة</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="conclusion">
+                <h2>🚀 الطريق إلى الأمام</h2>
+                <div class="conclusion-grid">
+                    <div class="conclusion-card">
+                        <h3><i class="fas fa-brain"></i> تحسين الفهم السببي</h3>
+                        <p>تطوير نماذج قادرة على فهم العلاقات السببية المعقدة بدقة أكبر</p>
+                    </div>
+                    <div class="conclusion-card">
+                        <h3><i class="fas fa-shield-alt"></i> تحسين الأمان والموثوقية</h3>
+                        <p>بناء أنظمة مقاومة للهجمات المعادية مع ضمان التشغيل الموثوق</p>
+                    </div>
+                    <div class="conclusion-card">
+                        <h3><i class="fas fa-balance-scale"></i> أطر حوكمة قوية</h3>
+                        <p>تطوير معايير أخلاقية وأطر مساءلة لأنظمة الذكاء الاصطناعي</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Summary Section -->
+        <section class="content-section">
+            <h2>📚 ملخص نهائي</h2>
+            
+            <div class="grid">
+                <div class="card">
+                    <h4><i class="fas fa-brain"></i> الذكاء التوليدي</h4>
+                    <p>أساسي للمحتوى الديناميكي والتفاعلات البسيطة، مناسب لمعظم المواقع كبداية</p>
+                </div>
+                
+                <div class="card">
+                    <h4><i class="fas fa-robot"></i> وكلاء الذكاء الاصطناعي</h4>
+                    <p>للارتقاء بتجربة المستخدم من خلال أتمتة المهام المتخصصة والتفاعلات الذكية</p>
+                </div>
+                
+                <div class="card">
+                    <h4><i class="fas fa-network-wired"></i> الذكاء الوكيل</h4>
+                    <p>للأنظمة المعقدة التي تتطلب تعاونًا بين وكلاء متخصصين متعددين</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-star"></i> أفضل الممارسات لمواقع الويب</h4>
+                <p>
+                    <strong>ابدأ صغيرًا:</strong> ابدأ بالذكاء التوليدي للمحتوى والتفاعلات الأساسية<br>
+                    <strong>تطور إلى وكلاء:</strong> أضف وكلاء للوظائف المتخصصة مثل دعم العملاء والتوصيات<br>
+                    <strong>اعتمد الذكاء الوكيل بحذر:</strong> للأنظمة المعقدة فقط مع طبقات تنسيق قوية<br>
+                    <strong>الأولوية للدقة والموثوقية:</strong> استخدم RAG واختبارات صارمة لبناء الثقة<br>
+                    <strong>التصميم للثقة:</strong> شفافية القرارات ووضوح حدود المسؤولية
+                </p>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer Section -->
+    <footer class="bg-[#1a252f] py-8 mt-12 text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col items-center text-center">
+                <!-- Logo and Copyright -->
+                <div class="flex flex-col items-center mb-6">
+                    <div class="bg-white/20 p-2 rounded-lg mb-3">
+                        <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16"></div>
+                    </div>
+                    <span class="text-white text-lg">© 2025 AIBOMECH</span>
+                </div>
+                
+                <!-- Social Links -->
+                <div class="flex space-x-6 mb-6">
+                    <a href="https://www.linkedin.com/company/aibomech/" 
+                       target="_blank" 
+                       class="text-white hover:text-blue-300 transition-colors text-3xl">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCMk8Wiy96j4m9BFl7SuwM2g" 
+                       target="_blank" 
+                       class="text-white hover:text-red-300 transition-colors text-3xl">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                
+                <!-- Additional Links -->
+                <div class="flex flex-wrap justify-center gap-4 text-sm">
+                    <a href="#" class="text-white/80 hover:text-white transition-colors">سياسة الخصوصية</a>
+                    <a href="#" class="text-white/80 hover:text-white transition-colors">شروط الاستخدام</a>
+                    <a href="#" class="text-white/80 hover:text-white transition-colors">اتصل بنا</a>
+                    <a href="#" class="text-white/80 hover:text-white transition-colors">الأسئلة الشائعة</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button id="scrollToTopBtn" title="العودة إلى الأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Add animation to elements when they come into view
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.8s ease forwards';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        // Add CSS animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Observe elements
+        document.querySelectorAll('.module-card, .concept-card, .real-world-example, .flow-step, .card, .concept-item, .timeline-content').forEach(el => {
+            el.style.opacity = '0';
+            observer.observe(el);
+        });
+        
+        // Scroll to top button functionality
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
