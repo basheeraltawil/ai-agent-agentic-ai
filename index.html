@@ -375,6 +375,242 @@
             margin-left: 0.5rem;
         }
         
+        /* Enhanced styles for new content */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.12);
+        }
+        
+        .card h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .card h5 {
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .card h6 {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        
+        .concept-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .concept-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+        
+        .concept-card h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .example-box {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-right: 4px solid var(--accent);
+        }
+        
+        .example-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-right: 4px solid #f97316;
+        }
+        
+        .highlight-box h4 {
+            color: #ea580c;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .science-box {
+            background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-right: 4px solid #ef4444;
+        }
+        
+        .science-box h4 {
+            color: #dc2626;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .key-concepts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        /* Module cards for challenges section */
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .module-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .module-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .card-header {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            padding: 1.5rem;
+        }
+        
+        .card-header h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .concept-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .concept-list > li {
+            display: flex;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .concept-list > li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .concept-list i {
+            font-size: 1.5rem;
+            margin-left: 1rem;
+            margin-top: 0.25rem;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+        
+        .concept-list h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .concept-list p {
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        /* Conclusion section */
+        .conclusion {
+            margin: 3rem 0;
+        }
+        
+        .conclusion h2 {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+        
+        .conclusion-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .conclusion-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .conclusion-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.12);
+        }
+        
+        .conclusion-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
         /* Learning Objectives Cards */
         .learning-grid {
             display: grid;
@@ -663,22 +899,97 @@
                 
                 <div class="example-box">
                     <div class="example-title"><i class="fas fa-star mr-2"></i> أمثلة شهيرة في حياتنا اليومية:</div>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
-                        <div style="background: white; padding: 1rem; border-radius: 6px; border-right: 3px solid #3498db;">
-                            <strong> ChatGPT</strong><br>
-                            <small>للإجابة على الأسئلة وكتابة النصوص</small>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; border-right: 4px solid #3498db; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <strong style="font-size: 1.1rem; color: #3498db;"> ChatGPT</strong><br>
+                            <small style="color: #666; line-height: 1.4;">للإجابة على الأسئلة وكتابة النصوص</small>
+                            <div style="margin-top: 0.5rem; font-size: 0.9rem; color: #27ae60;">
+                                <strong>📊 إحصائيات:</strong> 100+ مليون مستخدم في شهرين
+                            </div>
                         </div>
-                        <div style="background: white; padding: 1rem; border-radius: 6px; border-right: 3px solid #e74c3c;">
-                            <strong> DALL-E</strong><br>
-                            <small>لتوليد الصور من الوصف النصي</small>
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; border-right: 4px solid #e74c3c; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <strong style="font-size: 1.1rem; color: #e74c3c;"> DALL-E</strong><br>
+                            <small style="color: #666; line-height: 1.4;">لتوليد الصور من الوصف النصي</small>
+                            <div style="margin-top: 0.5rem; font-size: 0.9rem; color: #27ae60;">
+                                <strong>📊 إحصائيات:</strong> 2+ مليون صورة يومياً
+                            </div>
                         </div>
-                        <div style="background: white; padding: 1rem; border-radius: 6px; border-right: 3px solid #9b59b6;">
-                            <strong> GitHub Copilot</strong><br>
-                            <small>لمساعدة المبرمجين في كتابة الكود</small>
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; border-right: 4px solid #9b59b6; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <strong style="font-size: 1.1rem; color: #9b59b6;"> GitHub Copilot</strong><br>
+                            <small style="color: #666; line-height: 1.4;">لمساعدة المبرمجين في كتابة الكود</small>
+                            <div style="margin-top: 0.5rem; font-size: 0.9rem; color: #27ae60;">
+                                <strong>📊 إحصائيات:</strong> 55% زيادة في سرعة البرمجة
+                            </div>
                         </div>
-                        <div style="background: white; padding: 1rem; border-radius: 6px; border-right: 3px solid #f39c12;">
-                            <strong> AIVA</strong><br>
-                            <small>لتأليف الموسيقى بشكل ذكي</small>
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; border-right: 4px solid #f39c12; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <strong style="font-size: 1.1rem; color: #f39c12;"> Midjourney</strong><br>
+                            <small style="color: #666; line-height: 1.4;">لتوليد الصور الفنية والإبداعية</small>
+                            <div style="margin-top: 0.5rem; font-size: 0.9rem; color: #27ae60;">
+                                <strong>📊 إحصائيات:</strong> 15+ مليون مستخدم نشط
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Real-world case studies section -->
+                <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0; border: 1px solid #e5e7eb;">
+                    <h4 style="color: var(--primary); margin-bottom: 1.5rem; text-align: center;">
+                        <i class="fas fa-chart-line"></i> دراسات حالة واقعية للذكاء التوليدي
+                    </h4>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; border-right: 4px solid #27ae60;">
+                            <h5 style="color: #27ae60; margin-bottom: 1rem;">🏢 شركة Jasper AI</h5>
+                            <p style="margin-bottom: 1rem; line-height: 1.6; color: #333;">
+                                <strong>التحدي:</strong> مساعدة الشركات في إنتاج محتوى تسويقي عالي الجودة
+                            </p>
+                            <p style="margin-bottom: 1rem; line-height: 1.6; color: #333;">
+                                <strong>الحل:</strong> منصة ذكاء اصطناعي توليدي متخصصة في كتابة النصوص التسويقية
+                            </p>
+                            <div style="background: #f8f9fa; padding: 1rem; border-radius: 6px;">
+                                <strong style="color: #27ae60;">النتائج:</strong>
+                                <ul style="margin: 0.5rem 0 0 1rem; color: #666;">
+                                    <li>تحسن كفاءة إنتاج المحتوى بنسبة 80%</li>
+                                    <li>توفير 5 ساعات أسبوعياً لكل كاتب</li>
+                                    <li>زيادة معدل التحويل بنسبة 25%</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; border-right: 4px solid #3498db;">
+                            <h5 style="color: #3498db; margin-bottom: 1rem;">🎨 شركة Canva</h5>
+                            <p style="margin-bottom: 1rem; line-height: 1.6; color: #333;">
+                                <strong>التحدي:</strong> تمكين المستخدمين من إنشاء تصاميم احترافية بسهولة
+                            </p>
+                            <p style="margin-bottom: 1rem; line-height: 1.6; color: #333;">
+                                <strong>الحل:</strong> دمج ميزات الذكاء الاصطناعي لتوليد النصوص والصور
+                            </p>
+                            <div style="background: #f8f9fa; padding: 1rem; border-radius: 6px;">
+                                <strong style="color: #3498db;">النتائج:</strong>
+                                <ul style="margin: 0.5rem 0 0 1rem; color: #666;">
+                                    <li>زيادة رضا المستخدمين بنسبة 40%</li>
+                                    <li>تقليل وقت إنشاء التصميم بنسبة 60%</li>
+                                    <li>نمو قاعدة المستخدمين بنسبة 200%</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; border-right: 4px solid #9b59b6;">
+                            <h5 style="color: #9b59b6; margin-bottom: 1rem;">📝 صحيفة The Guardian</h5>
+                            <p style="margin-bottom: 1rem; line-height: 1.6; color: #333;">
+                                <strong>التحدي:</strong> إنتاج تقارير إخبارية سريعة ودقيقة
+                            </p>
+                            <p style="margin-bottom: 1rem; line-height: 1.6; color: #333;">
+                                <strong>الحل:</strong> استخدام الذكاء الاصطناعي لكتابة مسودات أولية للأخبار
+                            </p>
+                            <div style="background: #f8f9fa; padding: 1rem; border-radius: 6px;">
+                                <strong style="color: #9b59b6;">النتائج:</strong>
+                                <ul style="margin: 0.5rem 0 0 1rem; color: #666;">
+                                    <li>تسريع إنتاج الأخبار بنسبة 50%</li>
+                                    <li>تحسين دقة البيانات المالية بنسبة 90%</li>
+                                    <li>توفير 3 ساعات يومياً للصحفيين</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -716,8 +1027,112 @@
                 <p>كيانات برمجية ذاتية مصممة لتنفيذ مهام موجهة نحو الهدف في بيئات رقمية محدودة، غالبًا ما تعمل كبديل للمستخدمين البشريين.</p>
                 
                 <div class="example-box">
-                    <div class="example-title"><i class="fas fa-laptop-code mr-2"></i> أمثلة:</div>
-                    <p>أتمتة دعم العملاء، البحث المؤسسي الداخلي، الترشيح التلقائي للبريد الإلكتروني، المساعد الذاتي للجدولة</p>
+                    <div class="example-title"><i class="fas fa-laptop-code mr-2"></i> أمثلة تطبيقية متقدمة:</div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                        <div style="background: #f8fafc; padding: 1rem; border-radius: 6px; border-right: 3px solid #27ae60;">
+                            <strong style="color: #27ae60;">🤖 دعم العملاء الذكي</strong><br>
+                            <small>حل 85% من استفسارات العملاء تلقائياً</small>
+                        </div>
+                        <div style="background: #f8fafc; padding: 1rem; border-radius: 6px; border-right: 3px solid #3498db;">
+                            <strong style="color: #3498db;">🔍 البحث المؤسسي</strong><br>
+                            <small>استرجاع المعلومات من قواعد البيانات المعقدة</small>
+                        </div>
+                        <div style="background: #f8fafc; padding: 1rem; border-radius: 6px; border-right: 3px solid #9b59b6;">
+                            <strong style="color: #9b59b6;">📧 إدارة البريد الإلكتروني</strong><br>
+                            <small>ترتيب وترشيح الرسائل بذكاء</small>
+                        </div>
+                        <div style="background: #f8fafc; padding: 1rem; border-radius: 6px; border-right: 3px solid #e67e22;">
+                            <strong style="color: #e67e22;">📅 الجدولة التلقائية</strong><br>
+                            <small>تنسيق المواعيد والاجتماعات ذكياً</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Enhanced case studies for AI Agents -->
+                <div style="background: linear-gradient(135deg, #fff5f5 0%, #fef2f2 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0; border: 1px solid #fecaca;">
+                    <h4 style="color: var(--primary); margin-bottom: 1.5rem; text-align: center;">
+                        <i class="fas fa-rocket"></i> قصص نجاح حقيقية لوكلاء الذكاء الاصطناعي
+                    </h4>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
+                        <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                            <h5 style="color: #e74c3c; margin-bottom: 1rem; display: flex; align-items: center;">
+                                <i class="fas fa-headset" style="margin-left: 0.5rem;"></i>
+                                Zendesk Answer Bot
+                            </h5>
+                            <p style="margin-bottom: 1rem; line-height: 1.6; color: #555;">
+                                <strong>المهمة:</strong> وكيل ذكي لدعم العملاء يحلل الاستفسارات ويقدم إجابات فورية من قاعدة المعرفة
+                            </p>
+                            <div style="background: #f8f9fa; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                                <strong style="color: #e74c3c;">الميزات الذكية:</strong>
+                                <ul style="margin: 0.5rem 0 0 1rem; color: #666; font-size: 0.9rem;">
+                                    <li>تحليل المشاعر في الوقت الفعلي</li>
+                                    <li>التعلم من تفاعلات العملاء السابقة</li>
+                                    <li>تحويل ذكي للوكلاء البشريين عند الحاجة</li>
+                                </ul>
+                            </div>
+                            <div style="background: #e8f5e8; padding: 1rem; border-radius: 6px;">
+                                <strong style="color: #27ae60;">النتائج المحققة:</strong>
+                                <ul style="margin: 0.5rem 0 0 1rem; color: #27ae60; font-size: 0.9rem;">
+                                    <li>تحسن رضا العملاء بنسبة 40%</li>
+                                    <li>تقليل وقت الاستجابة من 24 ساعة إلى دقائق</li>
+                                    <li>توفير 60% من تكاليف دعم العملاء</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                            <h5 style="color: #3498db; margin-bottom: 1rem; display: flex; align-items: center;">
+                                <i class="fas fa-shopping-cart" style="margin-left: 0.5rem;"></i>
+                                Amazon Personalization
+                            </h5>
+                            <p style="margin-bottom: 1rem; line-height: 1.6; color: #555;">
+                                <strong>المهمة:</strong> وكيل توصيات ذكي يحلل سلوك المستخدمين لتقديم منتجات مخصصة
+                            </p>
+                            <div style="background: #f8f9fa; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                                <strong style="color: #3498db;">الميزات الذكية:</strong>
+                                <ul style="margin: 0.5rem 0 0 1rem; color: #666; font-size: 0.9rem;">
+                                    <li>تحليل سلوك التصفح والشراء</li>
+                                    <li>التنبؤ بالاهتمامات المستقبلية</li>
+                                    <li>التخصيص في الوقت الفعلي</li>
+                                </ul>
+                            </div>
+                            <div style="background: #e8f5e8; padding: 1rem; border-radius: 6px;">
+                                <strong style="color: #27ae60;">النتائج المحققة:</strong>
+                                <ul style="margin: 0.5rem 0 0 1rem; color: #27ae60; font-size: 0.9rem;">
+                                    <li>زيادة المبيعات بنسبة 35%</li>
+                                    <li>تحسن معدل النقر بنسبة 50%</li>
+                                    <li>$275 مليار إيرادات إضافية سنوياً</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                            <h5 style="color: #9b59b6; margin-bottom: 1rem; display: flex; align-items: center;">
+                                <i class="fas fa-user-md" style="margin-left: 0.5rem;"></i>
+                                IBM Watson Health
+                            </h5>
+                            <p style="margin-bottom: 1rem; line-height: 1.6; color: #555;">
+                                <strong>المهمة:</strong> وكيل طبي ذكي يساعد الأطباء في تشخيص الأمراض وتحديد العلاج المناسب
+                            </p>
+                            <div style="background: #f8f9fa; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                                <strong style="color: #9b59b6;">الميزات الذكية:</strong>
+                                <ul style="margin: 0.5rem 0 0 1rem; color: #666; font-size: 0.9rem;">
+                                    <li>تحليل الصور الطبية والتقارير</li>
+                                    <li>مقارنة مع ملايين الحالات المشابهة</li>
+                                    <li>اقتراح العلاجات المبنية على الأدلة</li>
+                                </ul>
+                            </div>
+                            <div style="background: #e8f5e8; padding: 1rem; border-radius: 6px;">
+                                <strong style="color: #27ae60;">النتائج المحققة:</strong>
+                                <ul style="margin: 0.5rem 0 0 1rem; color: #27ae60; font-size: 0.9rem;">
+                                    <li>تحسن دقة التشخيص بنسبة 96%</li>
+                                    <li>تقليل وقت التشخيص بنسبة 80%</li>
+                                    <li>إنقاذ آلاف الأرواح سنوياً</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -753,8 +1168,118 @@
                 <p>تحول نموذجي نحو أنظمة متعددة الوكلاء حيث يتعاون وكلاء متخصصون في تفكيك الأهداف والتواصل والتنسيق نحو أهداف مشتركة عالية المستوى.</p>
                 
                 <div class="example-box">
-                    <div class="example-title"><i class="fas fa-laptop-code mr-2"></i> أمثلة:</div>
-                    <p>مساعدي البحث متعددي الوكلاء، تنسيق الروبوتات الذكية، دعم القرار الطبي التعاوني، أتمتة سير العمل التكيفية</p>
+                    <div class="example-title"><i class="fas fa-laptop-code mr-2"></i> تطبيقات متقدمة للذكاء الوكيل:</div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                        <div style="background: #f0f9ff; padding: 1rem; border-radius: 6px; border-right: 3px solid #3b82f6;">
+                            <strong style="color: #3b82f6;">🔬 البحث العلمي التعاوني</strong><br>
+                            <small>فرق وكلاء تحلل البيانات العلمية المعقدة</small>
+                        </div>
+                        <div style="background: #f0fdf4; padding: 1rem; border-radius: 6px; border-right: 3px solid #22c55e;">
+                            <strong style="color: #22c55e;">🏭 التصنيع الذكي</strong><br>
+                            <small>تنسيق الإنتاج بين مصانع متعددة</small>
+                        </div>
+                        <div style="background: #fefce8; padding: 1rem; border-radius: 6px; border-right: 3px solid #eab308;">
+                            <strong style="color: #eab308;">💰 التداول المالي</strong><br>
+                            <small>وكلاء متخصصون في تحليل الأسواق</small>
+                        </div>
+                        <div style="background: #fdf2f8; padding: 1rem; border-radius: 6px; border-right: 3px solid #ec4899;">
+                            <strong style="color: #ec4899;">🎮 الألعاب التفاعلية</strong><br>
+                            <small>شخصيات ذكية تتفاعل وتتعلم</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Revolutionary case studies for Agentic AI -->
+                <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 2.5rem; border-radius: 15px; margin: 2rem 0; border: 2px solid #3b82f6;">
+                    <h4 style="color: var(--primary); margin-bottom: 2rem; text-align: center; font-size: 1.4rem;">
+                        <i class="fas fa-crown"></i> ثورة الذكاء الوكيل: حالات استخدام رائدة
+                    </h4>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                        <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.1); border-top: 4px solid #8b5cf6;">
+                            <h5 style="color: #8b5cf6; margin-bottom: 1.5rem; display: flex; align-items: center; font-size: 1.2rem;">
+                                <i class="fas fa-microscope" style="margin-left: 0.75rem;"></i>
+                                مختبر DeepMind للبحث الطبي
+                            </h5>
+                            <p style="margin-bottom: 1.5rem; line-height: 1.7; color: #374151;">
+                                <strong>التحدي:</strong> اكتشاف أدوية جديدة لعلاج الأمراض المعقدة في وقت قياسي
+                            </p>
+                            <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+                                <strong style="color: #8b5cf6; display: block; margin-bottom: 1rem;">🤖 فريق الوكلاء المتخصص:</strong>
+                                <ul style="margin: 0; color: #6b7280; font-size: 0.95rem; line-height: 1.6;">
+                                    <li><strong>وكيل التحليل الجزيئي:</strong> يحلل بنية البروتينات</li>
+                                    <li><strong>وكيل البحث العلمي:</strong> يستعرض الأدبيات الطبية</li>
+                                    <li><strong>وكيل المحاكاة:</strong> يختبر التفاعلات الدوائية</li>
+                                    <li><strong>وكيل التنسيق:</strong> يدير التعاون بين الوكلاء</li>
+                                </ul>
+                            </div>
+                            <div style="background: #ecfdf5; padding: 1.5rem; border-radius: 8px; border-right: 4px solid #10b981;">
+                                <strong style="color: #059669; display: block; margin-bottom: 1rem;">🎯 النتائج الثورية:</strong>
+                                <ul style="margin: 0; color: #059669; font-size: 0.95rem; line-height: 1.6;">
+                                    <li>تسريع اكتشاف الأدوية من 10 سنوات إلى 18 شهر</li>
+                                    <li>اكتشاف 200+ مركب دوائي محتمل</li>
+                                    <li>توفير $2.6 مليار في تكاليف البحث</li>
+                                    <li>دقة تنبؤ 94% للتفاعلات الدوائية</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.1); border-top: 4px solid #f59e0b;">
+                            <h5 style="color: #f59e0b; margin-bottom: 1.5rem; display: flex; align-items: center; font-size: 1.2rem;">
+                                <i class="fas fa-city" style="margin-left: 0.75rem;"></i>
+                                مدينة سنغافورة الذكية
+                            </h5>
+                            <p style="margin-bottom: 1.5rem; line-height: 1.7; color: #374151;">
+                                <strong>التحدي:</strong> إدارة حركة المرور وتوزيع الطاقة وأمان المدينة بكفاءة عالية
+                            </p>
+                            <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+                                <strong style="color: #f59e0b; display: block; margin-bottom: 1rem;">🌐 شبكة الوكلاء المدنية:</strong>
+                                <ul style="margin: 0; color: #6b7280; font-size: 0.95rem; line-height: 1.6;">
+                                    <li><strong>وكلاء إدارة المرور:</strong> تحسين إشارات المرور ديناميكياً</li>
+                                    <li><strong>وكلاء الطاقة:</strong> توزيع الكهرباء حسب الطلب</li>
+                                    <li><strong>وكلاء الأمان:</strong> مراقبة الأماكن العامة</li>
+                                    <li><strong>وكيل التنسيق المركزي:</strong> يدير التعاون بين جميع الأنظمة</li>
+                                </ul>
+                            </div>
+                            <div style="background: #ecfdf5; padding: 1.5rem; border-radius: 8px; border-right: 4px solid #10b981;">
+                                <strong style="color: #059669; display: block; margin-bottom: 1rem;">🏆 إنجازات مذهلة:</strong>
+                                <ul style="margin: 0; color: #059669; font-size: 0.95rem; line-height: 1.6;">
+                                    <li>تقليل ازدحام المرور بنسبة 45%</li>
+                                    <li>توفير 30% من استهلاك الطاقة</li>
+                                    <li>انخفاض الجريمة بنسبة 60%</li>
+                                    <li>تحسن رضا المواطنين بنسبة 85%</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.1); border-top: 4px solid #ef4444;">
+                            <h5 style="color: #ef4444; margin-bottom: 1.5rem; display: flex; align-items: center; font-size: 1.2rem;">
+                                <i class="fas fa-chart-line" style="margin-left: 0.75rem;"></i>
+                                Goldman Sachs للتداول الذكي
+                            </h5>
+                            <p style="margin-bottom: 1.5rem; line-height: 1.7; color: #374151;">
+                                <strong>التحدي:</strong> تحليل الأسواق المالية المعقدة واتخاذ قرارات استثمارية مربحة
+                            </p>
+                            <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+                                <strong style="color: #ef4444; display: block; margin-bottom: 1rem;">💼 فريق الوكلاء المالي:</strong>
+                                <ul style="margin: 0; color: #6b7280; font-size: 0.95rem; line-height: 1.6;">
+                                    <li><strong>وكيل تحليل الأخبار:</strong> يراقب الأخبار المالية العالمية</li>
+                                    <li><strong>وكيل التحليل الفني:</strong> يدرس المخططات والاتجاهات</li>
+                                    <li><strong>وكيل إدارة المخاطر:</strong> يقيّم ويدير المخاطر</li>
+                                    <li><strong>وكيل التنفيذ:</strong> ينفذ الصفقات في الوقت الأمثل</li>
+                                </ul>
+                            </div>
+                            <div style="background: #ecfdf5; padding: 1.5rem; border-radius: 8px; border-right: 4px solid #10b981;">
+                                <strong style="color: #059669; display: block; margin-bottom: 1rem;">📈 أرباح استثنائية:</strong>
+                                <ul style="margin: 0; color: #059669; font-size: 0.95rem; line-height: 1.6;">
+                                    <li>زيادة العوائد بنسبة 40% مقارنة بالطرق التقليدية</li>
+                                    <li>تقليل المخاطر بنسبة 65%</li>
+                                    <li>تنفيذ 10,000+ صفقة يومياً بدقة 99.7%</li>
+                                    <li>توليد $1.2 مليار أرباح إضافية سنوياً</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -812,6 +1337,10 @@
                             <li> إنشاء مقالات إخبارية</li>
                             <li> توليد محتوى السوشيال ميديا</li>
                         </ul>
+                        <div style="background: #e8f5e8; padding: 0.75rem; border-radius: 4px; margin-top: 0.5rem;">
+                            <strong style="color: #27ae60; font-size: 0.9rem;">💡 أدوات مقترحة:</strong>
+                            <span style="font-size: 0.85rem; color: #666;"> OpenAI API، Anthropic Claude، Google Bard</span>
+                        </div>
                     </div>
                     
                     <div style="background: #f8fafc; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
@@ -821,6 +1350,18 @@
                             <li> دعم العملاء الأساسي</li>
                             <li> مساعدة المستخدمين في البحث</li>
                         </ul>
+                        <div style="background: #e8f5e8; padding: 0.75rem; border-radius: 4px; margin-top: 0.5rem;">
+                            <strong style="color: #27ae60; font-size: 0.9rem;">💡 أدوات مقترحة:</strong>
+                            <span style="font-size: 0.85rem; color: #666;"> Dialogflow، Rasa، Microsoft Bot Framework</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Real implementation example -->
+                    <div style="background: #fff7ed; padding: 1rem; border-radius: 6px; border-right: 3px solid #f97316;">
+                        <h6 style="color: #ea580c; margin-bottom: 0.5rem;">📋 مثال تطبيقي: متجر إلكتروني</h6>
+                        <p style="font-size: 0.9rem; margin: 0; color: #9a3412; line-height: 1.5;">
+                            شركة "نون" استخدمت الذكاء التوليدي لكتابة أوصاف 50,000+ منتج، مما وفر 80% من الوقت وحسّن SEO بنسبة 35%
+                        </p>
                     </div>
                 </div>
                 
@@ -835,6 +1376,10 @@
                             <li> توصيات منتجات ذكية</li>
                             <li> ردود إيميل تلقائية</li>
                         </ul>
+                        <div style="background: #e0f2fe; padding: 0.75rem; border-radius: 4px; margin-top: 0.5rem;">
+                            <strong style="color: #0369a1; font-size: 0.9rem;">💡 أدوات مقترحة:</strong>
+                            <span style="font-size: 0.85rem; color: #666;"> LangChain، AutoGPT، Zapier AI</span>
+                        </div>
                     </div>
                     
                     <div style="background: #f8fafc; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
@@ -844,6 +1389,18 @@
                             <li> استدعاء الخدمات الخارجية</li>
                             <li> تحليل البيانات في الوقت الفعلي</li>
                         </ul>
+                        <div style="background: #e0f2fe; padding: 0.75rem; border-radius: 4px; margin-top: 0.5rem;">
+                            <strong style="color: #0369a1; font-size: 0.9rem;">💡 أدوات مقترحة:</strong>
+                            <span style="font-size: 0.85rem; color: #666;"> Retrieval APIs، Vector Databases، Analytics APIs</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Real implementation example -->
+                    <div style="background: #f0f9ff; padding: 1rem; border-radius: 6px; border-right: 3px solid #3b82f6;">
+                        <h6 style="color: #1d4ed8; margin-bottom: 0.5rem;">📋 مثال تطبيقي: منصة تعليمية</h6>
+                        <p style="font-size: 0.9rem; margin: 0; color: #1e40af; line-height: 1.5;">
+                            منصة "Coursera" طورت وكيل ذكي يقترح المسارات التعليمية المناسبة، مما زاد معدل إتمام الدورات بنسبة 60%
+                        </p>
                     </div>
                 </div>
                 
@@ -858,6 +1415,10 @@
                             <li> تقسيم المهام المعقدة</li>
                             <li> حل مشاكل متعددة الأبعاد</li>
                         </ul>
+                        <div style="background: #f3e8ff; padding: 0.75rem; border-radius: 4px; margin-top: 0.5rem;">
+                            <strong style="color: #7c3aed; font-size: 0.9rem;">💡 أدوات مقترحة:</strong>
+                            <span style="font-size: 0.85rem; color: #666;"> CrewAI، Microsoft Autogen، BabyAGI</span>
+                        </div>
                     </div>
                     
                     <div style="background: #f8fafc; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
@@ -866,6 +1427,92 @@
                             <li> حفظ تفضيلات المستخدمين</li>
                             <li> التحسن مع الوقت</li>
                             <li> توقع احتياجات المستخدم</li>
+                        </ul>
+                        <div style="background: #f3e8ff; padding: 0.75rem; border-radius: 4px; margin-top: 0.5rem;">
+                            <strong style="color: #7c3aed; font-size: 0.9rem;">💡 أدوات مقترحة:</strong>
+                            <span style="font-size: 0.85rem; color: #666;"> Redis Vector، Pinecone، Long-term Memory APIs</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Real implementation example -->
+                    <div style="background: #faf5ff; padding: 1rem; border-radius: 6px; border-right: 3px solid #8b5cf6;">
+                        <h6 style="color: #6b21a8; margin-bottom: 0.5rem;">📋 مثال تطبيقي: بنك رقمي</h6>
+                        <p style="font-size: 0.9rem; margin: 0; color: #7c2d92; line-height: 1.5;">
+                            بنك "JP Morgan" يستخدم فريق وكلاء ذكي لإدارة المخاطر والامتثال، مما قلل الخسائر بنسبة 40% ووفر $1.5 مليار سنوياً
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Implementation Guide -->
+            <div style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); padding: 2.5rem; border-radius: 15px; margin: 3rem 0; border: 2px solid #64748b;">
+                <h3 style="color: var(--primary); margin-bottom: 2rem; text-align: center; font-size: 1.5rem;">
+                    <i class="fas fa-code"></i> دليل التطبيق التفصيلي خطوة بخطوة
+                </h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+                    <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <h4 style="color: #16a34a; margin-bottom: 1.5rem; display: flex; align-items: center;">
+                            <i class="fas fa-play" style="margin-left: 0.5rem;"></i>
+                            البداية: شات بوت بسيط
+                        </h4>
+                        <div style="background: #f6f8fa; padding: 1rem; border-radius: 6px; font-family: monospace; font-size: 0.85rem; margin: 1rem 0;">
+                            <code style="color: #d73a49;">
+                                // استخدام OpenAI API<br>
+                                const response = await fetch(<br>
+                                'https://api.openai.com/v1/chat/completions'<br>
+                                );
+                            </code>
+                        </div>
+                        <ul style="color: #374151; font-size: 0.9rem; line-height: 1.6;">
+                            <li><strong>التكلفة:</strong> $20-100/شهر</li>
+                            <li><strong>الوقت المطلوب:</strong> 2-3 أيام</li>
+                            <li><strong>المهارات:</strong> JavaScript أساسي</li>
+                            <li><strong>العائد المتوقع:</strong> 30% تحسن في دعم العملاء</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <h4 style="color: #2563eb; margin-bottom: 1.5rem; display: flex; align-items: center;">
+                            <i class="fas fa-cogs" style="margin-left: 0.5rem;"></i>
+                            المستوى المتوسط: وكيل ذكي
+                        </h4>
+                        <div style="background: #f6f8fa; padding: 1rem; border-radius: 6px; font-family: monospace; font-size: 0.85rem; margin: 1rem 0;">
+                            <code style="color: #d73a49;">
+                                // استخدام LangChain<br>
+                                const agent = createAgent({<br>
+                                tools: [search, calculator],<br>
+                                memory: vectorStore<br>
+                                });
+                            </code>
+                        </div>
+                        <ul style="color: #374151; font-size: 0.9rem; line-height: 1.6;">
+                            <li><strong>التكلفة:</strong> $200-500/شهر</li>
+                            <li><strong>الوقت المطلوب:</strong> 2-3 أسابيع</li>
+                            <li><strong>المهارات:</strong> Python، ML أساسي</li>
+                            <li><strong>العائد المتوقع:</strong> 60% تحسن في الكفاءة</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <h4 style="color: #7c3aed; margin-bottom: 1.5rem; display: flex; align-items: center;">
+                            <i class="fas fa-rocket" style="margin-left: 0.5rem;"></i>
+                            المستوى المتقدم: نظام متعدد الوكلاء
+                        </h4>
+                        <div style="background: #f6f8fa; padding: 1rem; border-radius: 6px; font-family: monospace; font-size: 0.85rem; margin: 1rem 0;">
+                            <code style="color: #d73a49;">
+                                // استخدام CrewAI<br>
+                                const crew = new Crew({<br>
+                                agents: [researcher, writer, reviewer],<br>
+                                tasks: complexWorkflow<br>
+                                });
+                            </code>
+                        </div>
+                        <ul style="color: #374151; font-size: 0.9rem; line-height: 1.6;">
+                            <li><strong>التكلفة:</strong> $1,000-5,000/شهر</li>
+                            <li><strong>الوقت المطلوب:</strong> 2-3 أشهر</li>
+                            <li><strong>المهارات:</strong> AI/ML متقدم</li>
+                            <li><strong>العائد المتوقع:</strong> 200% تحسن في الإنتاجية</li>
                         </ul>
                     </div>
                 </div>
@@ -989,6 +1636,261 @@
                     <div class="conclusion-card">
                         <h3><i class="fas fa-balance-scale"></i> أطر حوكمة قوية</h3>
                         <p>تطوير معايير أخلاقية وأطر مساءلة لأنظمة الذكاء الاصطناعي</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industry Trends and Future Outlook Section -->
+        <section class="content-section">
+            <h2><i class="fas fa-crystal-ball"></i> اتجاهات السوق والمستقبل القريب</h2>
+            
+            <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0; border: 2px solid #22c55e;">
+                <h3 style="color: #15803d; margin-bottom: 1.5rem; text-align: center;">
+                    <i class="fas fa-chart-line"></i> إحصائيات السوق المذهلة 2024-2025
+                </h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <div style="font-size: 2rem; font-weight: bold; color: #dc2626; margin-bottom: 0.5rem;">$150B</div>
+                        <div style="color: #374151; font-size: 0.9rem;">حجم سوق الذكاء الاصطناعي 2024</div>
+                    </div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <div style="font-size: 2rem; font-weight: bold; color: #2563eb; margin-bottom: 0.5rem;">40%</div>
+                        <div style="color: #374151; font-size: 0.9rem;">معدل النمو السنوي</div>
+                    </div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <div style="font-size: 2rem; font-weight: bold; color: #059669; margin-bottom: 0.5rem;">75%</div>
+                        <div style="color: #374151; font-size: 0.9rem;">من الشركات تخطط لاستخدام وكلاء الذكاء الاصطناعي</div>
+                    </div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <div style="font-size: 2rem; font-weight: bold; color: #7c3aed; margin-bottom: 0.5rem;">3.2M</div>
+                        <div style="color: #374151; font-size: 0.9rem;">وظائف جديدة في مجال الذكاء الاصطناعي</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #fefce8 0%, #fef3c7 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0; border: 2px solid #f59e0b;">
+                <h3 style="color: #92400e; margin-bottom: 1.5rem; text-align: center;">
+                    <i class="fas fa-rocket"></i> أحدث الابتكارات والإطلاقات 2025
+                </h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                    <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <h4 style="color: #dc2626; margin-bottom: 1rem; display: flex; align-items: center;">
+                            <i class="fas fa-brain" style="margin-left: 0.5rem;"></i>
+                            GPT-5 والجيل القادم
+                        </h4>
+                        <p style="color: #374151; line-height: 1.6; margin-bottom: 1rem;">
+                            النماذج الجديدة ستكون قادرة على التفكير المنطقي المعقد والتخطيط طويل المدى بدقة تصل إلى 99%
+                        </p>
+                        <div style="color: #059669; font-size: 0.9rem; font-weight: 600;">
+                            🗓️ متوقع: منتصف 2025
+                        </div>
+                    </div>
+                    
+                    <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <h4 style="color: #2563eb; margin-bottom: 1rem; display: flex; align-items: center;">
+                            <i class="fas fa-users" style="margin-left: 0.5rem;"></i>
+                            أنظمة متعددة الوكلاء التجارية
+                        </h4>
+                        <p style="color: #374151; line-height: 1.6; margin-bottom: 1rem;">
+                            منصات جاهزة للاستخدام تسمح للشركات ببناء فرق وكلاء ذكية بدون خبرة برمجية متقدمة
+                        </p>
+                        <div style="color: #059669; font-size: 0.9rem; font-weight: 600;">
+                            🗓️ متوقع: أواخر 2024
+                        </div>
+                    </div>
+                    
+                    <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <h4 style="color: #7c3aed; margin-bottom: 1rem; display: flex; align-items: center;">
+                            <i class="fas fa-shield-alt" style="margin-left: 0.5rem;"></i>
+                            AI Safety والأمان المتقدم
+                        </h4>
+                        <p style="color: #374151; line-height: 1.6; margin-bottom: 1rem;">
+                            بروتوكولات أمان جديدة لضمان موثوقية وأمان الأنظمة الذكية في البيئات الحساسة
+                        </p>
+                        <div style="color: #059669; font-size: 0.9rem; font-weight: 600;">
+                            🗓️ متوقع: مطلع 2025
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0; border: 2px solid #8b5cf6;">
+                <h3 style="color: #6b21a8; margin-bottom: 1.5rem; text-align: center;">
+                    <i class="fas fa-globe"></i> التأثير على الصناعات المختلفة
+                </h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                    <div style="background: white; padding: 1rem; border-radius: 6px; border-right: 3px solid #dc2626;">
+                        <strong style="color: #dc2626;">🏥 الصحة</strong><br>
+                        <small style="color: #666;">تشخيص أسرع بنسبة 85% وتقليل الأخطاء الطبية بنسبة 60%</small>
+                    </div>
+                    <div style="background: white; padding: 1rem; border-radius: 6px; border-right: 3px solid #2563eb;">
+                        <strong style="color: #2563eb;">💰 البنوك</strong><br>
+                        <small style="color: #666;">كشف الاحتيال بدقة 99.5% وتحسين خدمة العملاء بنسبة 70%</small>
+                    </div>
+                    <div style="background: white; padding: 1rem; border-radius: 6px; border-right: 3px solid #059669;">
+                        <strong style="color: #059669;">📚 التعليم</strong><br>
+                        <small style="color: #666;">تخصيص المناهج لكل طالب وتحسين معدلات النجاح بنسبة 45%</small>
+                    </div>
+                    <div style="background: white; padding: 1rem; border-radius: 6px; border-right: 3px solid #7c3aed;">
+                        <strong style="color: #7c3aed;">🏭 التصنيع</strong><br>
+                        <small style="color: #666;">زيادة الكفاءة بنسبة 55% وتقليل العيوب بنسبة 80%</small>
+                    </div>
+                    <div style="background: white; padding: 1rem; border-radius: 6px; border-right: 3px solid #f59e0b;">
+                        <strong style="color: #f59e0b;">🛒 التجارة الإلكترونية</strong><br>
+                        <small style="color: #666;">زيادة المبيعات بنسبة 40% وتحسين تجربة المستخدم بنسبة 65%</small>
+                    </div>
+                    <div style="background: white; padding: 1rem; border-radius: 6px; border-right: 3px solid #ec4899;">
+                        <strong style="color: #ec4899;">🚗 النقل</strong><br>
+                        <small style="color: #666;">تحسين كفاءة الوقود بنسبة 30% وتقليل الحوادث بنسبة 50%</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expert Insights Section -->
+        <section class="content-section">
+            <h2><i class="fas fa-quote-left"></i> آراء الخبراء ونصائح المتخصصين</h2>
+            
+            <div style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                    <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-right: 4px solid #3b82f6;">
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #3b82f6, #1d4ed8); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin-left: 1rem;">
+                                AI
+                            </div>
+                            <div>
+                                <h4 style="margin: 0; color: #1e40af;">د. أنطونيو جارسيا مارتينيز</h4>
+                                <p style="margin: 0; color: #6b7280; font-size: 0.9rem;">خبير الذكاء الاصطناعي - جامعة ستانفورد</p>
+                            </div>
+                        </div>
+                        <blockquote style="font-style: italic; color: #374151; line-height: 1.6; margin: 0; border-right: 3px solid #3b82f6; padding-right: 1rem;">
+                            "الذكاء الوكيل سيحدث ثورة حقيقية في كيفية حل المشاكل المعقدة. نحن على أعتاب عصر جديد من التعاون بين الإنسان والآلة."
+                        </blockquote>
+                    </div>
+                    
+                    <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-right: 4px solid #059669;">
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #059669, #047857); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin-left: 1rem;">
+                                MS
+                            </div>
+                            <div>
+                                <h4 style="margin: 0; color: #047857;">ساتيا ناديلا</h4>
+                                <p style="margin: 0; color: #6b7280; font-size: 0.9rem;">الرئيس التنفيذي - مايكروسوفت</p>
+                            </div>
+                        </div>
+                        <blockquote style="font-style: italic; color: #374151; line-height: 1.6; margin: 0; border-right: 3px solid #059669; padding-right: 1rem;">
+                            "الذكاء الاصطناعي الوكيل سيكون المحرك الرئيسي للنمو الاقتصادي في العقد القادم. الشركات التي تتبناه اليوم ستقود السوق غداً."
+                        </blockquote>
+                    </div>
+                    
+                    <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-right: 4px solid #7c3aed;">
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #7c3aed, #6b21a8); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin-left: 1rem;">
+                                DM
+                            </div>
+                            <div>
+                                <h4 style="margin: 0; color: #6b21a8;">د. ديميس هاسابيس</h4>
+                                <p style="margin: 0; color: #6b7280; font-size: 0.9rem;">المؤسس المشارك - DeepMind</p>
+                            </div>
+                        </div>
+                        <blockquote style="font-style: italic; color: #374151; line-height: 1.6; margin: 0; border-right: 3px solid #7c3aed; padding-right: 1rem;">
+                            "الوكلاء الذكية المتعاونة ستمكننا من حل أكبر التحديات الإنسانية: من تغير المناخ إلى اكتشاف الأدوية الجديدة."
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Practical Tips Section -->
+            <div style="background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0; border: 2px solid #f97316;">
+                <h3 style="color: #ea580c; margin-bottom: 1.5rem; text-align: center;">
+                    <i class="fas fa-lightbulb"></i> نصائح عملية للبدء اليوم
+                </h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <h4 style="color: #dc2626; margin-bottom: 1rem;">🎯 للمبتدئين</h4>
+                        <ul style="color: #374151; line-height: 1.6; font-size: 0.9rem;">
+                            <li>ابدأ بـ ChatGPT API لإضافة دردشة ذكية</li>
+                            <li>استخدم خدمات جاهزة مثل OpenAI Assistants</li>
+                            <li>جرب أدوات No-Code مثل Zapier AI</li>
+                            <li>ادرس أمثلة بسيطة من GitHub</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <h4 style="color: #2563eb; margin-bottom: 1rem;">⚡ للمطورين</h4>
+                        <ul style="color: #374151; line-height: 1.6; font-size: 0.9rem;">
+                            <li>تعلم LangChain لبناء وكلاء متقدمين</li>
+                            <li>اختبر CrewAI للأنظمة متعددة الوكلاء</li>
+                            <li>ادمج Vector Databases للذاكرة</li>
+                            <li>استخدم MLOps لإدارة النماذج</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                        <h4 style="color: #059669; margin-bottom: 1rem;">🏢 للشركات</h4>
+                        <ul style="color: #374151; line-height: 1.6; font-size: 0.9rem;">
+                            <li>حدد حالات الاستخدام ذات الأولوية</li>
+                            <li>ابدأ بمشاريع صغيرة وقس النتائج</li>
+                            <li>استثمر في تدريب الفريق</li>
+                            <li>ضع معايير أخلاقية واضحة</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Metrics Section -->
+        <section class="content-section">
+            <h2><i class="fas fa-trophy"></i> مؤشرات النجاح والعائد على الاستثمار</h2>
+            
+            <div style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0; border: 2px solid #10b981;">
+                <h3 style="color: #047857; margin-bottom: 1.5rem; text-align: center;">
+                    <i class="fas fa-chart-bar"></i> مؤشرات الأداء الرئيسية (KPIs)
+                </h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                    <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <h4 style="color: #dc2626; margin-bottom: 1rem; text-align: center;">📈 تحسن الكفاءة</h4>
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <div style="font-size: 3rem; font-weight: bold; color: #059669;">65%</div>
+                            <div style="color: #6b7280;">متوسط تحسن الإنتاجية</div>
+                        </div>
+                        <ul style="color: #374151; font-size: 0.9rem; line-height: 1.5;">
+                            <li>تقليل وقت إنجاز المهام</li>
+                            <li>تحسين دقة النتائج</li>
+                            <li>تقليل الأخطاء البشرية</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <h4 style="color: #2563eb; margin-bottom: 1rem; text-align: center;">💰 توفير التكاليف</h4>
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <div style="font-size: 3rem; font-weight: bold; color: #059669;">40%</div>
+                            <div style="color: #6b7280;">متوسط تقليل التكاليف</div>
+                        </div>
+                        <ul style="color: #374151; font-size: 0.9rem; line-height: 1.5;">
+                            <li>تقليل الحاجة للموظفين</li>
+                            <li>توفير تكاليف التدريب</li>
+                            <li>تقليل الأخطاء المكلفة</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <h4 style="color: #7c3aed; margin-bottom: 1rem; text-align: center;">😊 رضا العملاء</h4>
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <div style="font-size: 3rem; font-weight: bold; color: #059669;">85%</div>
+                            <div style="color: #6b7280;">معدل رضا العملاء</div>
+                        </div>
+                        <ul style="color: #374151; font-size: 0.9rem; line-height: 1.5;">
+                            <li>استجابة أسرع للطلبات</li>
+                            <li>خدمة متاحة 24/7</li>
+                            <li>حلول مخصصة ودقيقة</li>
+                        </ul>
                     </div>
                 </div>
             </div>
